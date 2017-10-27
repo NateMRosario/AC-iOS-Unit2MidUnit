@@ -9,8 +9,10 @@
 import Foundation
 
 class PoloniusMonologueModel {
+    var counter = 0
+    var currentLine = ""
     //Complete this model
-    private let textArr = ["My liege, and madam, to expostulate",
+     private let textArr = ["My liege, and madam, to expostulate",
                  "What majesty should be, what duty is,",
                  "What day is day, night night, and time is time,",
                  "Were nothing but to waste night, day, and time;",
@@ -18,4 +20,14 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    func lines() {
+        let elementsInTheArray = textArr.count
+        let line = textArr[counter]
+        if counter != elementsInTheArray - 1 {
+            counter += 1
+        } else {
+            counter = 0
+        }
+        currentLine = line
+    }
 }

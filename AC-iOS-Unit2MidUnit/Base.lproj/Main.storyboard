@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +16,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Polonius Monologue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D17-vv-gEi">
+                                <rect key="frame" x="40" y="20" width="295" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9X-yc-FAx">
+                                <rect key="frame" x="154.5" y="149.5" width="65" height="30"/>
+                                <state key="normal" title="Next Line"/>
+                                <connections>
+                                    <action selector="nextLineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Tl-6E-eVJ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="248" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z9L-Vt-Yug">
+                                <rect key="frame" x="64" y="67" width="246" height="52.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio or Mercutio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TSA-CZ-XRF">
+                                <rect key="frame" x="64.5" y="277.5" width="245" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="753" text="Romeo and Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DF-Mc-gfo">
+                                <rect key="frame" x="34.5" y="215.5" width="305" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-Tz-wQP">
+                                <rect key="frame" x="138.5" y="323.5" width="98" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="LbP-Pm-kzh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOn-Qr-MAO">
+                                <rect key="frame" x="67" y="403" width="241" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D17-vv-gEi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3GY-uU-nkm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vOn-Qr-MAO" secondAttribute="bottom" constant="49" id="7ka-uk-ELr"/>
+                            <constraint firstItem="z9L-Vt-Yug" firstAttribute="centerX" secondItem="2DF-Mc-gfo" secondAttribute="centerX" id="7oD-9q-ghe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D17-vv-gEi" secondAttribute="trailing" constant="40" id="9JG-2f-3lk"/>
+                            <constraint firstItem="z9L-Vt-Yug" firstAttribute="centerX" secondItem="TSA-CZ-XRF" secondAttribute="centerX" id="ALx-fB-X4z"/>
+                            <constraint firstItem="z9L-Vt-Yug" firstAttribute="centerX" secondItem="D17-vv-gEi" secondAttribute="centerX" id="DxC-ff-kVF"/>
+                            <constraint firstItem="z9L-Vt-Yug" firstAttribute="centerX" secondItem="r9X-yc-FAx" secondAttribute="centerX" id="Hkp-eN-pho"/>
+                            <constraint firstItem="vOn-Qr-MAO" firstAttribute="top" secondItem="Ie0-Tz-wQP" secondAttribute="bottom" constant="59" id="Ozm-5b-SlQ"/>
+                            <constraint firstItem="Ie0-Tz-wQP" firstAttribute="top" secondItem="TSA-CZ-XRF" secondAttribute="bottom" constant="16" id="R3u-K2-8iI"/>
+                            <constraint firstItem="r9X-yc-FAx" firstAttribute="top" secondItem="z9L-Vt-Yug" secondAttribute="bottom" constant="30" id="TGM-k5-Eg3"/>
+                            <constraint firstItem="Ie0-Tz-wQP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UUu-tr-Uke"/>
+                            <constraint firstItem="vOn-Qr-MAO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aRi-xe-UEW"/>
+                            <constraint firstItem="TSA-CZ-XRF" firstAttribute="top" secondItem="2DF-Mc-gfo" secondAttribute="bottom" constant="33" id="efe-p2-UBP"/>
+                            <constraint firstItem="vOn-Qr-MAO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="hpa-d7-BZd"/>
+                            <constraint firstItem="z9L-Vt-Yug" firstAttribute="top" secondItem="D17-vv-gEi" secondAttribute="bottom" constant="18" id="kvn-ng-lLS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vOn-Qr-MAO" secondAttribute="trailing" constant="67" id="mWY-lh-EzY"/>
+                            <constraint firstItem="2DF-Mc-gfo" firstAttribute="top" secondItem="r9X-yc-FAx" secondAttribute="bottom" constant="36" id="oZx-me-emW"/>
+                            <constraint firstItem="D17-vv-gEi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qYn-UK-xhf"/>
+                            <constraint firstItem="z9L-Vt-Yug" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="uCU-MI-36x"/>
+                            <constraint firstItem="Ie0-Tz-wQP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zcf-Me-E3T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="invalidLabel" destination="Ie0-Tz-wQP" id="Oj9-SK-XWe"/>
+                        <outlet property="lineDisplay" destination="z9L-Vt-Yug" id="2KK-nf-Wka"/>
+                        <outlet property="outputView" destination="vOn-Qr-MAO" id="BDm-QT-V6E"/>
+                        <outlet property="searchInput" destination="TSA-CZ-XRF" id="Htp-WI-Edz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,9 +8,19 @@
 
 import Foundation
 
+enum Names {
+    case romeo
+    case benvolio
+    case mercutio
+    case invalid
+}
+
 struct RomeoAndJulietModel {
+    var romeoString = ""
+    var benvolioString = ""
+    var mercutioString = ""
     //Complete this model
-    private let sceneFourTextArr = [
+    let sceneFourTextArr = [
         """
         ROMEO:
         What, shall this speech be spoke for our excuse?
@@ -72,4 +82,31 @@ struct RomeoAndJulietModel {
         Too rude, too boisterous, and it pricks like thorn.
         """
         ]
+     mutating func filterByName() {
+        for name in sceneFourTextArr {
+            if name.contains("ROMEO") {
+                romeoString += name
+            }
+            if name.contains("BENVOLIO") {
+                benvolioString += name
+            }
+            if name.contains("MERCUTIO") {
+                mercutioString += name
+            }
+            
+        }
+    }
+    
+    func searchName(_ name: String) -> Names {
+        if name == "romeo".lowercased() {
+            return .romeo
+        }
+        if name == "benvolio".lowercased() {
+            return .benvolio
+        }
+        if name == "mercutio".lowercased() {
+            return .mercutio
+        }
+        return .invalid
+    }
 }

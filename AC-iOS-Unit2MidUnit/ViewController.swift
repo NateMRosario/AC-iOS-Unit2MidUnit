@@ -8,12 +8,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    var monologue = PoloniusMonologueModel()
+    var script = RomeoAndJulietModel()
+    
+    @IBOutlet weak var invalidLabel: UILabel!
+    @IBOutlet weak var searchInput: UITextField!
+    @IBOutlet weak var lineDisplay: UITextView!
+    @IBOutlet weak var outputView: UITextView!
     
     override func viewDidLoad() {
+        searchInput.delegate = self
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func nextLineButtonPressed(_ sender: UIButton) {
+        monologue.lines()
+        lineDisplay.text = monologue.currentLine
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        guard let nameInput = searchInput.text else {
+            return false
+        }
+        searchInput.text = ""
+        switch script.searchName(nameInput) {
+        case .romeo:
+            print("yay")
+            invalidLabel.isHidden = true
+        outputView.text = script.romeoString
+        case .benvolio:
+            print("nah")
+            invalidLabel.isHidden = true
+            outputView.text = script.benvolioString
+        case .mercutio:
+            invalidLabel.isHidden = true
+        outputView.text = script.mercutioString
+        case .invalid:
+            invalidLabel.isHidden = false
+        }
+        print("end")
+        return true
+    }
 }
 
