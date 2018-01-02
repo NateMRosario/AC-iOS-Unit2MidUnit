@@ -85,7 +85,7 @@ struct RomeoAndJulietModel {
      mutating func filterByName() {
         for name in sceneFourTextArr {
             if name.contains("ROMEO") {
-                romeoString += name
+                romeoString += name 
             }
             if name.contains("BENVOLIO") {
                 benvolioString += name

@@ -24,32 +24,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9X-yc-FAx">
-                                <rect key="frame" x="154.5" y="149.5" width="65" height="30"/>
+                                <rect key="frame" x="154.5" y="149" width="65" height="30"/>
                                 <state key="normal" title="Next Line"/>
                                 <connections>
                                     <action selector="nextLineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Tl-6E-eVJ"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="248" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z9L-Vt-Yug">
-                                <rect key="frame" x="64" y="67" width="246" height="52.5"/>
+                                <rect key="frame" x="64" y="67" width="246" height="52"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Romeo, Benvolio or Mercutio" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TSA-CZ-XRF">
-                                <rect key="frame" x="64.5" y="277.5" width="245" height="30"/>
+                                <rect key="frame" x="64.5" y="277" width="245" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="753" text="Romeo and Juliet: Scene IV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DF-Mc-gfo">
-                                <rect key="frame" x="34.5" y="215.5" width="305" height="29"/>
+                                <rect key="frame" x="34.5" y="215" width="305" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie0-Tz-wQP">
-                                <rect key="frame" x="138.5" y="323.5" width="98" height="20.5"/>
+                                <rect key="frame" x="138.5" y="323" width="98" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="LbP-Pm-kzh"/>
                                 </constraints>

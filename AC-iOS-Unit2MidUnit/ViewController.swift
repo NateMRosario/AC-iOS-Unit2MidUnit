@@ -36,11 +36,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         searchInput.text = ""
         switch script.searchName(nameInput) {
         case .romeo:
-            print("yay")
             invalidLabel.isHidden = true
         outputView.text = script.romeoString
         case .benvolio:
-            print("nah")
             invalidLabel.isHidden = true
             outputView.text = script.benvolioString
         case .mercutio:
@@ -49,7 +47,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         case .invalid:
             invalidLabel.isHidden = false
         }
-        print("end")
         return true
     }
 }
