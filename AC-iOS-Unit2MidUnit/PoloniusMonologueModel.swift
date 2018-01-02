@@ -9,7 +9,7 @@
 import Foundation
 
 class PoloniusMonologueModel {
-    var counter = 0
+    var counter = 1
     var currentLine = ""
     //Complete this model
      private let textArr = ["My liege, and madam, to expostulate",
@@ -20,6 +20,9 @@ class PoloniusMonologueModel {
                  "And tediousness the limbs and outward flourishes,",
                  "I will be brief. Your noble son is mad."
                 ]
+    func defaultLine() {
+        currentLine = textArr[0]
+    }
     func lines() {
         let elementsInTheArray = textArr.count
         let line = textArr[counter]

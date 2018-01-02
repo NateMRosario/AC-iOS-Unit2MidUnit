@@ -20,7 +20,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         searchInput.delegate = self
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func nextLineButtonPressed(_ sender: UIButton) {
